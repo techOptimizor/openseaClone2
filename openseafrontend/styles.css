@@ -1,0 +1,73 @@
+body {
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    margin: 0;
+    color: black;
+    background-image: linear-gradient(to right, #f1ebec, #f2e2eb, #ece2f0, #e3e3f4, #d9e4f5);
+}
+
+.nav-bar {
+    background-color: #e3eaec;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 10px; */
+}
+
+.nav-item {
+    margin-left: auto;
+    display: flex;
+    align-content: space-between;
+    margin-top: 10px;
+}
+
+.nav-item .link {
+    display: flex;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.nav-bar h1 {
+    position: relative;
+}
+
+.nav-bar h1 ::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    border-left: 2px solid white;
+    animation: typing 3s steps(10) infinite;
+}
+
+.card {
+    color: black;
+    padding: 10px;
+}
+.main {
+    position: relative;
+}
+
+.profile {
+    display: none;
+    background-color: rgb(18, 4, 4);
+    color: white;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    width: 100%;
+}
+
+.main:hover .profile {
+    display: block;
+}
+@keyframes typing {
+    40%,
+    60% {
+        left: calc(100% +30px);
+    }
+    100% {
+        left: 0;
+    }
+}
